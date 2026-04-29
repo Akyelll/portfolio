@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desenhos</title>
+
+    <link rel="stylesheet" href="BaseMenu/base.css">
+    <link rel="stylesheet" href="BaseMenu/arte.css">
+    <link rel="stylesheet" href="BaseMenu/modal.css">
+
+</head>
+
+<body>
+
+    <!-- TUDO QUE VAI RECEBER BLUR -->
+    <div id="site">
+
+        <div class="container">
+
+            <aside class="menu">
+                <a href="index.html">Início</a>
+                <a href="codigo.html">Códigos</a>
+                <a href="paginaArte.html">Desenhos</a>
+            </aside>
+
+            <main class="conteudo">
+
+                <!-- CARD 1 -->
+                <div class="card">
+                    <img src="ArtesMais/artecapa.jpg">
+                    <h3>Origem</h3>
+
+                    <p>
+                        Arte digital focada no estudo de mãos, iluminação e perspectiva.
+                    </p>
+
+                    <p>O foco principal foi explorar um traço mais carregado, utilizando hachuras para reforçar
+                        contraste e textura. A execução levou cerca de 3 horas.
+                    </p>
+
+                    <p class="info-extra">
+                        2022 • Digital • Estudo técnico
+                    </p>
+
+                    <button class="ver-mais" data-img="ArtesMais/artecapa.jpg" data-texto="Estudo de luz e composição">
+                        Ver mais
+                    </button>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+                    <img src="ArtesMais/arte.jpg">
+                    <h3>Kakuzu — Reinterpretação</h3>
+
+                    <p>
+                        Retrato do personagem Kakuzu, da obra Naruto Shippuden, reinterpretado a partir do meu estilo.
+                    </p>
+
+                    <p> O foco principal foi explorar um traço mais carregado, utilizando hachuras para reforçar
+                        contraste e textura. A execução levou cerca de 3 horas.
+                    </p>
+                    <p class="info-extra">
+                        2026 • Papel • Reenterpretação de personagem
+                    </p>
+
+                    <button class="ver-mais" data-img="ArtesMais/arte.jpg"
+                        data-texto="Exploração de sombra e contraste">
+                        Ver mais
+                    </button>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- 🔥 MODAL (fora do site) -->
+    <div class="modal" id="modal">
+
+        <span class="fechar">&times;</span>
+
+        <img class="modal-img" id="modal-img">
+
+        <p id="modal-texto"></p>
+
+    </div>
+
+    <!-- JS -->
+    <script src="desenhos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/* estilo exclusivo de códigos */
+
+.card a {
+  margin-top: auto;
+  padding: 8px;
+  background: #de0000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.card a:hover {
+  background: white;
+  color: black;
+}

@@ -1,0 +1,15 @@
+/* estilo exclusivo de desenhos */
+
+.card button {
+  margin-top: auto;
+  padding: 8px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #de0000;
+}

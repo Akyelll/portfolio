@@ -1,0 +1,100 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e1e;
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* MENU */
+.menu {
+  width: 250px;
+  background: #2a2a2a;
+  padding: 20px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  background: #3a3a3a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: #de0000;
+}
+
+/* CONTEÚDO */
+.conteudo {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CARD BASE */
+.card {
+  width: 250px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* TITULOS */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* HIERARQUIA GLOBAL */
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+
+/* CARD */
+.card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* DESCRIÇÃO PRINCIPAL */
+.card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* DETALHES (técnica, tempo, etc.) */
+.card .info-extra {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
