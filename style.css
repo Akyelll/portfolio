@@ -1,36 +1,49 @@
 /* ===== RESET BÁSICO ===== */
 body {
-  margin: 0; /* remove espaço padrão do navegador */
-  font-family: Arial, sans-serif; /* define fonte padrão */
-  overflow-y: scroll; /* faz com que a barra de rolagem seja permanete, NÃO RETIRAR SE NÃO O SITE VAI VOLTAR A BUGAR KKK*/ 
-  overflow-x: hidden; /*  bloqueia rolagem lateral, NÃO RETIRAR SE NÃO O SITE VAI VOLTAR A BUGAR */
-  background-color: black; /* cor de fundo*/
+  margin: 0;
+  /* remove espaço padrão do navegador */
+  font-family: Arial, sans-serif;
+  /* define fonte padrão */
+  overflow-y: scroll;
+  /* faz com que a barra de rolagem seja permanete, NÃO RETIRAR SE NÃO O SITE VAI VOLTAR A BUGAR KKK*/
+  overflow-x: hidden;
+  /*  bloqueia rolagem lateral, NÃO RETIRAR SE NÃO O SITE VAI VOLTAR A BUGAR */
+  background-color: black;
+  /* cor de fundo*/
 }
 
 
 /* ===== CONTAINER PRINCIPAL ===== */
 .split {
-  display: flex; /* coloca os dois lados um ao lado do outro */
-   min-height: 100vh; /* ocupa 100% da altura da tela */
+  display: flex;
+  /* coloca os dois lados um ao lado do outro */
+  min-height: 100vh;
+  /* ocupa 100% da altura da tela */
 }
 
 
 /* ===== CADA LADO (ARTE / CÓDIGO) ===== */
 .lado {
-  flex: 1; /* cada lado ocupa metade da tela */
-  position: relative; /* necessário para usar camadas (::before) */
-  
-  display: flex; /* ativa flexbox */
-  justify-content: center; /* centraliza horizontal */
-  align-items: center; /* centraliza vertical */
+  flex: 1;
+  /* cada lado ocupa metade da tela */
+  position: relative;
+  /* necessário para usar camadas (::before) */
 
-  overflow: hidden; /* esconde o excesso do blur */
+  display: flex;
+  /* ativa flexbox */
+  justify-content: center;
+  /* centraliza horizontal */
+  align-items: center;
+  /* centraliza vertical */
+
+  overflow: hidden;
+  /* esconde o excesso do blur */
 }
 
 
 /* ===== IMAGENS DE FUNDO ===== */
 .arte {
-  background: url('imagensBase/arte.jpg') center/cover; 
+  background: url('imagensBase/arte.jpg') center/cover;
   /* imagem centralizada e cobrindo todo o espaço */
 }
 
@@ -41,115 +54,140 @@ body {
 
 /* ===== CAMADA DE BLUR (FUNDO BORRADO) ===== */
 .lado::before {
-  content: ""; /* cria um elemento invisível */
+  content: "";
+  /* cria um elemento invisível */
 
-  position: absolute; /* posiciona dentro do .lado */
+  position: absolute;
+  /* posiciona dentro do .lado */
   top: 0;
   left: 0;
 
   width: 100%;
   height: 100%;
 
-  background: inherit; 
+  background: inherit;
   /* pega automaticamente a imagem do .arte ou .codigo */
 
-  filter: blur(8px); 
+  filter: blur(8px);
   /*  aplica o desfoque SOMENTE no fundo */
 
-  transform: scale(1.1); 
+  transform: scale(1.1);
   /* aumenta levemente para evitar bordas cortadas */
 
-  z-index: 1; 
+  z-index: 1;
   /* fica atrás do conteúdo */
 }
 
 
 /* ===== OVERLAY (CAMADA ESCURA + CONTEÚDO) ===== */
 .overlay {
-  position: relative; /* necessário para controlar camadas */
-  z-index: 2; /* fica acima do fundo borrado */
+  position: relative;
+  /* necessário para controlar camadas */
+  z-index: 2;
+  /* fica acima do fundo borrado */
 
   width: 100%;
   height: 100%;
 
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.6);
   /* camada escura para dar contraste */
 
-  display: flex; /* ativa flex */
-  flex-direction: column; /* organiza em coluna */
-  justify-content: center; /* centraliza vertical */
-  align-items: center; /* centraliza horizontal */
+  display: flex;
+  /* ativa flex */
+  flex-direction: column;
+  /* organiza em coluna */
+  justify-content: center;
+  /* centraliza vertical */
+  align-items: center;
+  /* centraliza horizontal */
 
-  color: white; /* texto branco */
-  text-align: center; /* centraliza texto */
+  color: white;
+  /* texto branco */
+  text-align: center;
+  /* centraliza texto */
 
-  transition: 0.3s; /* animações suaves */
+  transition: 0.3s;
+  /* animações suaves */
 }
 
 
 /* ===== TEXTO ===== */
 .overlay h1 {
-  font-size: 40px; /* tamanho do título */
-  margin-bottom: 10px; /* espaço abaixo */
+  font-size: 40px;
+  /* tamanho do título */
+  margin-bottom: 10px;
+  /* espaço abaixo */
 }
 
 .overlay p {
-  margin-bottom: 20px; /* espaço antes do botão */
+  margin-bottom: 20px;
+  /* espaço antes do botão */
 }
 
 
 /* ===== BOTÃO ===== */
 .button {
-  background: #de0000; /* cor do botão */
-  color: white; /* cor do texto */
+  background: #de0000;
+  /* cor do botão */
+  color: white;
+  /* cor do texto */
 
-  padding: 12px 25px; /* espaço interno */
-  border-radius: 8px; /* bordas arredondadas */
+  padding: 12px 25px;
+  /* espaço interno */
+  border-radius: 8px;
+  /* bordas arredondadas */
 
-  text-decoration: none; /* remove sublinhado do link */
+  text-decoration: none;
+  /* remove sublinhado do link */
 
-  transition: 0.3s; /* animação suave */
+  transition: 0.3s;
+  /* animação suave */
 }
 
 
 /* ===== HOVER DO BOTÃO ===== */
 .button:hover {
-  background: white; /* muda fundo */
-  color: black; /* muda texto */
+  background: white;
+  /* muda fundo */
+  color: black;
+  /* muda texto */
 }
 
 
 /* ===== HOVER NO CARD ===== */
 .lado:hover .overlay {
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(0, 0, 0, 0.3);
   /* deixa mais claro ao passar o mouse */
 }
 
 .lado:hover {
-  transform: scale(1.02); 
+  transform: scale(1.02);
   /* leve zoom no card */
 }
 
 
 /* ===== ÍCONE CENTRAL ===== */
 .icone {
-  width: 150px; /* largura */
-  height: 150px; /* altura (igual = círculo perfeito) */
+  width: 150px;
+  /* largura */
+  height: 150px;
+  /* altura (igual = círculo perfeito) */
 
-  border-radius: 50%; 
+  border-radius: 50%;
   /* 🔥 transforma em círculo */
 
-  object-fit: cover; 
+  object-fit: cover;
   /* evita distorção da imagem */
 
-  margin-bottom: 15px; /* espaço abaixo */
+  margin-bottom: 15px;
+  /* espaço abaixo */
 
-  border: 2px solid white; 
+  border: 2px solid white;
   /* borda branca para destaque */
 
-  z-index: 3; 
+  z-index: 3;
   /* garante que fique acima de tudo */
 
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
   /* sombra suave para dar profundidade */
 }
